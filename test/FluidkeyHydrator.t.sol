@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {Hydrator} from "../src/Hydrator.sol";
+import {FluidkeyHydrator} from "src/FluidkeyHydrator.sol";
 
 contract CounterTest is Test {
     Hydrator public hydrator;
