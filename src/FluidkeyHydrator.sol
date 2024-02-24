@@ -14,9 +14,8 @@ pragma solidity ^0.8.19;
  * @title FluidkeyHydrator v0.1
  * @author Fluidkey (fluidkey.com)
  * @notice This contract deploys 1/1 Safes with minimal calldata.
- *         It takes an address in bytes32 and inflates it to obtain the
- *         calldata needed to deploy a 1/1 v1.3.0 Safe controlled by the
- *         passed address.
+ *         It takes an address in bytes32 and inflates it to deploy
+ *         a 1/1 v1.3.0 Safe controlled by the passed address.
  */
 contract FluidkeyHydrator {
     function deploySafe(bytes32 signerAddress) public {
