@@ -1,66 +1,40 @@
-## Foundry
+Fluidkey Hydrator
+-----------------
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+             !
+            /@\
+           /@@@\
+          { ^_^ }
+          \@@@@@/
+            """
 
-Foundry consists of:
+The Fluidkey Hydrator is optimized to deploy 1/1 v1.3.0 Safes with minimal gas costs on L2s.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Deployment address: `0x1a93629bfcc6e9c7241e587094fae26f62503fad`
 
-## Documentation
+Deployed on:
+- [Optimism](https://optimistic.etherscan.io/address/0x1a93629bfcc6e9c7241e587094fae26f62503fad)
+- [Base](https://basescan.org/address/0x1a93629bfcc6e9c7241e587094fae26f62503fad)
+- [Arbitrum](https://arbiscan.io/address/0x1a93629bfcc6e9c7241e587094fae26f62503fad)
+- [Sepolia](https://sepolia.etherscan.io/address/0x1a93629BFcc6E9c7241E587094FAE26F62503FaD)
 
-https://book.getfoundry.sh/
+Usage
+-----
 
-## Usage
+To deploy a 1/1 Safe, call the `deploySafe` function with the `signerAddress`, a bytes32 value starting with the address of the signer, e.g. `0x38064551a016f1fe770d7fbbe1ee02afc9080260000000000000000000000000`
 
-### Build
+> [!NOTE] 
+> This method does not support adding a salt and can therefore only be used to deploy a single Safe per address.
 
+Deploying the contract on other chains
+--------------------------------------
+
+To deploy the contract on other chains:
+1. Install [Foundry](https://book.getfoundry.sh/)
+2. Clone this repository
+3. Set your deployer private key in a .env file in this repository
+4. Add block explorer API keys to the `foundry.toml` file
+5. Run the following command:
 ```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+forge script script/FluidkeyHydrator.s.sol:Create2Deployment --rpc-url YOUR_RPC_URL --broadcast --verify -vvvv
 ```

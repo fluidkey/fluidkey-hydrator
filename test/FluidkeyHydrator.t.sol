@@ -5,10 +5,10 @@ import {Test, console2} from "forge-std/Test.sol";
 import {FluidkeyHydrator} from "src/FluidkeyHydrator.sol";
 
 contract CounterTest is Test {
-    Hydrator public hydrator;
+    FluidkeyHydrator public hydrator;
 
     function setUp() public {
-        hydrator = new Hydrator();
+        hydrator = new FluidkeyHydrator();
     }
 
     function test_callOtherContract() public {

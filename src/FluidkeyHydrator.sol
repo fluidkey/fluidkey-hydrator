@@ -26,6 +26,7 @@ contract FluidkeyHydrator {
 
         bytes memory data = abi.encodePacked(dataChunk1, signerAddress, dataChunk2);
 
-        address(0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2).call(data);
+        (bool success,) = address(0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2).call(data);
+        require(success, "Failed to deploy Safe");
     }
 }

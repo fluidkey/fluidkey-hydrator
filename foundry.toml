@@ -6,6 +6,4 @@ via_ir = true
 optimizer = true
 optimizer_runs = 1000
 [etherscan]
-baseSepolia = { key = "YBMY8Z9SAM77NUINWEMNCD13K1QTS24Y3R", chain = 84532, url = "https://api-sepolia.basescan.org/api" }
-sepolia = { key = "YTZ9JABRUNDAWRITJ97696FHN2IJRYKMKM", chain = 11155111 }
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
