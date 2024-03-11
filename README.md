@@ -25,6 +25,7 @@ To deploy a 1/1 Safe, call the `deploySafe` function with the `signerAddress`, a
 
 > [!NOTE] 
 > This method does not support adding a salt and can therefore only be used to deploy a single Safe per address.
+> Also note that this contract deploys Safes using the Safe factory deployed at `0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2`, which is not the canonical Safe factory on all chains.
 
 Deploying the contract on other chains
 --------------------------------------
